@@ -1,0 +1,392 @@
+[
+  {
+    "operation": "verifySession",
+    "params": {
+      "session": "valid"
+    },
+    "method": "POST",
+    "path": "/session/verify",
+    "body": {
+      "session": "valid"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "listProducts",
+    "params": {},
+    "method": "GET",
+    "path": "/products",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "getCharge",
+    "params": {
+      "id": "example"
+    },
+    "method": "GET",
+    "path": "/charges/example",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "deliverCharge",
+    "params": {
+      "id": "example"
+    },
+    "method": "POST",
+    "path": "/charges/example/deliver",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "refundCharge",
+    "params": {
+      "id": "example"
+    },
+    "method": "POST",
+    "path": "/charges/example/refund",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "payReward",
+    "params": {
+      "playerId": "p_12345678",
+      "amount": 20,
+      "key": "coins",
+      "reason": "Verified result"
+    },
+    "method": "POST",
+    "path": "/rewards",
+    "body": {
+      "playerId": "p_12345678",
+      "amount": 20,
+      "reason": "Verified result",
+      "key": "coins"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "getPool",
+    "params": {},
+    "method": "GET",
+    "path": "/pool",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "sendNotification",
+    "params": {
+      "playerId": "p_12345678",
+      "text": "Your table is ready",
+      "startParam": "table-example"
+    },
+    "method": "POST",
+    "path": "/notifications",
+    "body": {
+      "playerId": "p_12345678",
+      "text": "Your table is ready",
+      "startParam": "table-example"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "verifyAd",
+    "params": {
+      "adId": "ad_example"
+    },
+    "method": "POST",
+    "path": "/ads/verify",
+    "body": {
+      "adId": "ad_example"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "listTables",
+    "params": {},
+    "method": "GET",
+    "path": "/lobby/tables",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "saveTable",
+    "params": {
+      "tableId": "example",
+      "hostPlayerId": "p_12345678",
+      "seats": 2,
+      "taken": 1,
+      "title": "Example",
+      "stake": 10,
+      "pot": 20,
+      "expiresIn": 900
+    },
+    "method": "POST",
+    "path": "/lobby/tables",
+    "body": {
+      "tableId": "example",
+      "hostPlayerId": "p_12345678",
+      "seats": 2,
+      "taken": 1,
+      "title": "Example",
+      "stake": 10,
+      "pot": 20,
+      "expiresIn": 900
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "sitAtTable",
+    "params": {
+      "id": "example",
+      "playerId": "p_12345678"
+    },
+    "method": "POST",
+    "path": "/lobby/tables/example/sit",
+    "body": {
+      "playerId": "p_12345678"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "removeTable",
+    "params": {
+      "id": "example"
+    },
+    "method": "DELETE",
+    "path": "/lobby/tables/example",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "listPendingCharges",
+    "params": {
+      "cursor": "abc123",
+      "limit": 5
+    },
+    "method": "GET",
+    "path": "/charges",
+    "body": {},
+    "query": {
+      "cursor": "abc123",
+      "limit": "5"
+    },
+    "text": false
+  },
+  {
+    "operation": "listLeaderboards",
+    "params": {},
+    "method": "GET",
+    "path": "/leaderboards",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "saveLeaderboard",
+    "params": {
+      "board": "main",
+      "season": "week1",
+      "name": "Weekly score",
+      "order": "desc",
+      "startsAt": 1,
+      "endsAt": 9999999999999
+    },
+    "method": "POST",
+    "path": "/leaderboards/main/seasons/week1",
+    "body": {
+      "name": "Weekly score",
+      "order": "desc",
+      "startsAt": 1,
+      "endsAt": 9999999999999
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "getLeaderboard",
+    "params": {
+      "board": "main",
+      "season": "week1",
+      "playerId": "p_12345678",
+      "limit": 5
+    },
+    "method": "GET",
+    "path": "/leaderboards/main/seasons/week1",
+    "body": {},
+    "query": {
+      "playerId": "p_12345678",
+      "limit": "5"
+    },
+    "text": false
+  },
+  {
+    "operation": "submitScore",
+    "params": {
+      "board": "main",
+      "season": "week1",
+      "playerId": "p_12345678",
+      "score": 42
+    },
+    "method": "POST",
+    "path": "/leaderboards/main/seasons/week1/scores",
+    "body": {
+      "playerId": "p_12345678",
+      "score": 42
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "moderateScore",
+    "params": {
+      "board": "main",
+      "season": "week1",
+      "playerId": "p_12345678",
+      "hidden": true,
+      "reason": "Verified result"
+    },
+    "method": "POST",
+    "path": "/leaderboards/main/seasons/week1/moderation",
+    "body": {
+      "playerId": "p_12345678",
+      "hidden": true,
+      "reason": "Verified result"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "getPlayerStorage",
+    "params": {
+      "playerId": "p_12345678",
+      "key": "coins"
+    },
+    "method": "GET",
+    "path": "/players/p_12345678/storage/coins",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "setPlayerStorage",
+    "params": {
+      "playerId": "p_12345678",
+      "key": "coins",
+      "value": {
+        "coins": 10
+      },
+      "expectedVersion": 0
+    },
+    "method": "POST",
+    "path": "/players/p_12345678/storage/coins",
+    "body": {
+      "value": {
+        "coins": 10
+      },
+      "expectedVersion": 0
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "listWebhookEvents",
+    "params": {
+      "cursor": "abc123"
+    },
+    "method": "GET",
+    "path": "/webhooks/events",
+    "body": {},
+    "query": {
+      "cursor": "abc123"
+    },
+    "text": false
+  },
+  {
+    "operation": "replayWebhookEvent",
+    "params": {
+      "id": "example"
+    },
+    "method": "POST",
+    "path": "/webhooks/events/example/replay",
+    "body": {},
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "createAdChallenge",
+    "params": {
+      "playerId": "p_12345678",
+      "context": {
+        "kind": "boost"
+      },
+      "expiresIn": 900
+    },
+    "method": "POST",
+    "path": "/ads/challenges",
+    "body": {
+      "playerId": "p_12345678",
+      "context": {
+        "kind": "boost"
+      },
+      "expiresIn": 900
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "claimAdChallenge",
+    "params": {
+      "id": "example",
+      "adId": "ad_example"
+    },
+    "method": "POST",
+    "path": "/ads/challenges/example/claim",
+    "body": {
+      "adId": "ad_example"
+    },
+    "query": {},
+    "text": false
+  },
+  {
+    "operation": "getAnalytics",
+    "params": {
+      "days": 7
+    },
+    "method": "GET",
+    "path": "/analytics",
+    "body": {},
+    "query": {
+      "days": "7"
+    },
+    "text": false
+  },
+  {
+    "operation": "exportAnalytics",
+    "params": {
+      "days": 7
+    },
+    "method": "GET",
+    "path": "/analytics/report.csv",
+    "body": {},
+    "query": {
+      "days": "7"
+    },
+    "text": true
+  }
+]

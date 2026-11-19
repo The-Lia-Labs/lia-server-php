@@ -1,0 +1,22 @@
+{
+  "name": "lia-labs/server",
+  "version": "0.1.0",
+  "description": "Lia server SDK for PHP and Laravel",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-hash": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "LiaLabs\\Server\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "php tests/webhooks.php"
+  },
+  "homepage": "https://docs.lialabs.org/packages/server"
+}

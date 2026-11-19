@@ -1,0 +1,389 @@
+{
+  "verifySession": {
+    "name": "verifySession",
+    "method": "POST",
+    "path": "/session/verify",
+    "body": [
+      "session"
+    ],
+    "query": [],
+    "required": [
+      "session"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "listProducts": {
+    "name": "listProducts",
+    "method": "GET",
+    "path": "/products",
+    "body": [],
+    "query": [],
+    "required": [],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "getCharge": {
+    "name": "getCharge",
+    "method": "GET",
+    "path": "/charges/{id}",
+    "body": [],
+    "query": [],
+    "required": [
+      "id"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "deliverCharge": {
+    "name": "deliverCharge",
+    "method": "POST",
+    "path": "/charges/{id}/deliver",
+    "body": [],
+    "query": [],
+    "required": [
+      "id"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "refundCharge": {
+    "name": "refundCharge",
+    "method": "POST",
+    "path": "/charges/{id}/refund",
+    "body": [],
+    "query": [],
+    "required": [
+      "id"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "payReward": {
+    "name": "payReward",
+    "method": "POST",
+    "path": "/rewards",
+    "body": [
+      "playerId",
+      "amount",
+      "reason",
+      "key"
+    ],
+    "query": [],
+    "required": [
+      "playerId",
+      "amount",
+      "key"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "getPool": {
+    "name": "getPool",
+    "method": "GET",
+    "path": "/pool",
+    "body": [],
+    "query": [],
+    "required": [],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "sendNotification": {
+    "name": "sendNotification",
+    "method": "POST",
+    "path": "/notifications",
+    "body": [
+      "playerId",
+      "text",
+      "startParam"
+    ],
+    "query": [],
+    "required": [
+      "playerId",
+      "text"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "verifyAd": {
+    "name": "verifyAd",
+    "method": "POST",
+    "path": "/ads/verify",
+    "body": [
+      "adId"
+    ],
+    "query": [],
+    "required": [
+      "adId"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "listTables": {
+    "name": "listTables",
+    "method": "GET",
+    "path": "/lobby/tables",
+    "body": [],
+    "query": [],
+    "required": [],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "saveTable": {
+    "name": "saveTable",
+    "method": "POST",
+    "path": "/lobby/tables",
+    "body": [
+      "tableId",
+      "hostPlayerId",
+      "seats",
+      "taken",
+      "title",
+      "stake",
+      "pot",
+      "expiresIn"
+    ],
+    "query": [],
+    "required": [
+      "tableId",
+      "hostPlayerId"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "sitAtTable": {
+    "name": "sitAtTable",
+    "method": "POST",
+    "path": "/lobby/tables/{id}/sit",
+    "body": [
+      "playerId"
+    ],
+    "query": [],
+    "required": [
+      "id",
+      "playerId"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "removeTable": {
+    "name": "removeTable",
+    "method": "DELETE",
+    "path": "/lobby/tables/{id}",
+    "body": [],
+    "query": [],
+    "required": [
+      "id"
+    ],
+    "text": false,
+    "since": "1.0.0"
+  },
+  "listPendingCharges": {
+    "name": "listPendingCharges",
+    "method": "GET",
+    "path": "/charges",
+    "body": [],
+    "query": [
+      "cursor",
+      "limit"
+    ],
+    "required": [],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "listLeaderboards": {
+    "name": "listLeaderboards",
+    "method": "GET",
+    "path": "/leaderboards",
+    "body": [],
+    "query": [],
+    "required": [],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "saveLeaderboard": {
+    "name": "saveLeaderboard",
+    "method": "POST",
+    "path": "/leaderboards/{board}/seasons/{season}",
+    "body": [
+      "name",
+      "order",
+      "startsAt",
+      "endsAt"
+    ],
+    "query": [],
+    "required": [
+      "board",
+      "season",
+      "name",
+      "order"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "getLeaderboard": {
+    "name": "getLeaderboard",
+    "method": "GET",
+    "path": "/leaderboards/{board}/seasons/{season}",
+    "body": [],
+    "query": [
+      "playerId",
+      "limit"
+    ],
+    "required": [
+      "board",
+      "season"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "submitScore": {
+    "name": "submitScore",
+    "method": "POST",
+    "path": "/leaderboards/{board}/seasons/{season}/scores",
+    "body": [
+      "playerId",
+      "score"
+    ],
+    "query": [],
+    "required": [
+      "board",
+      "season",
+      "playerId",
+      "score"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "moderateScore": {
+    "name": "moderateScore",
+    "method": "POST",
+    "path": "/leaderboards/{board}/seasons/{season}/moderation",
+    "body": [
+      "playerId",
+      "hidden",
+      "reason"
+    ],
+    "query": [],
+    "required": [
+      "board",
+      "season",
+      "playerId",
+      "hidden",
+      "reason"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "getPlayerStorage": {
+    "name": "getPlayerStorage",
+    "method": "GET",
+    "path": "/players/{playerId}/storage/{key}",
+    "body": [],
+    "query": [],
+    "required": [
+      "playerId",
+      "key"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "setPlayerStorage": {
+    "name": "setPlayerStorage",
+    "method": "POST",
+    "path": "/players/{playerId}/storage/{key}",
+    "body": [
+      "value",
+      "expectedVersion"
+    ],
+    "query": [],
+    "required": [
+      "playerId",
+      "key",
+      "value",
+      "expectedVersion"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "listWebhookEvents": {
+    "name": "listWebhookEvents",
+    "method": "GET",
+    "path": "/webhooks/events",
+    "body": [],
+    "query": [
+      "cursor"
+    ],
+    "required": [],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "replayWebhookEvent": {
+    "name": "replayWebhookEvent",
+    "method": "POST",
+    "path": "/webhooks/events/{id}/replay",
+    "body": [],
+    "query": [],
+    "required": [
+      "id"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "createAdChallenge": {
+    "name": "createAdChallenge",
+    "method": "POST",
+    "path": "/ads/challenges",
+    "body": [
+      "playerId",
+      "context",
+      "expiresIn"
+    ],
+    "query": [],
+    "required": [
+      "playerId",
+      "context"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "claimAdChallenge": {
+    "name": "claimAdChallenge",
+    "method": "POST",
+    "path": "/ads/challenges/{id}/claim",
+    "body": [
+      "adId"
+    ],
+    "query": [],
+    "required": [
+      "id",
+      "adId"
+    ],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "getAnalytics": {
+    "name": "getAnalytics",
+    "method": "GET",
+    "path": "/analytics",
+    "body": [],
+    "query": [
+      "days"
+    ],
+    "required": [],
+    "text": false,
+    "since": "1.14.0"
+  },
+  "exportAnalytics": {
+    "name": "exportAnalytics",
+    "method": "GET",
+    "path": "/analytics/report.csv",
+    "body": [],
+    "query": [
+      "days"
+    ],
+    "required": [],
+    "text": true,
+    "since": "1.14.0"
+  }
+}
